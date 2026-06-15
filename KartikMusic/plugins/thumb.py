@@ -24,7 +24,7 @@ async def _thumb_hndlr(_, m: types.Message):
     arg = m.command[1].lower()
     if arg in ["enable", "on"]:
         await db.set_thumb_mode(m.chat.id, False)
-        return await m.reply_text(m.lang["thumb_off"])
+        return await m.reply_text(m.lang["thumb_on"])
     elif arg in ["disable", "off"]:
         await db.set_thumb_mode(m.chat.id, True)
         return await m.reply_text(m.lang["thumb_on"])
